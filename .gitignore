@@ -1,0 +1,3 @@
+#ignorar doc-docx
+*.doc*
+!notes.doc
