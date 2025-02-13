@@ -7,6 +7,9 @@ public class calculator {
         return number1 - number2;
     }
 
+    public int product(int number1, int number2){
+        return number1 * number2;
+    }
     public static void main(String[] args) {
         
     }
