@@ -18,8 +18,12 @@ public class Calculator {
         return number1 / number2;
     }
 
-    public double power (double base, double pow)  {
-        return (Math.pow(base, pow)); 
+    public double power(double base, double pow) {
+        return (Math.pow(base, pow));
+    }
+
+    public double root(double exponent, double base) {
+        return Math.pow(1 / exponent, base);
     }
 
     public static void main(String[] args) {
@@ -35,6 +39,7 @@ public class Calculator {
                     "\n3. Multiplicar" +
                     "\n4. Dividir" +
                     "\n6. Potencia" +
+                    "\n7. Raiz Cuadrada" +
                     "\n5. Salir");
 
             option = Integer.parseInt(scanner.nextLine());
@@ -61,8 +66,15 @@ public class Calculator {
                             System.out.println("No es posible dividir por 0");
                         }
                         break;
-                        case 6:
+                    case 6:
                         System.out.println("El resultado de la potencia es: " + calculator.power(number1, number2));
+                        break;
+                    case 7:
+                        try {
+                            System.out.println("El resultado de la raiz es: " + calculator.root(number1, number2));
+                        } catch (Exception e) {
+                            System.out.println("No es posible sacar raiz a un numero negativo");
+                        }
                         break;
                     default:
                         break;
