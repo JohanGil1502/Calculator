@@ -18,6 +18,10 @@ public class Calculator {
         return number1 / number2;
     }
 
+    public double power (double base, double pow)  {
+        return (Math.pow(base, pow)); 
+    }
+
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
 
@@ -30,6 +34,7 @@ public class Calculator {
                     "\n2. Restar" +
                     "\n3. Multiplicar" +
                     "\n4. Dividir" +
+                    "\n6. Potencia" +
                     "\n5. Salir");
 
             option = Integer.parseInt(scanner.nextLine());
@@ -55,6 +60,9 @@ public class Calculator {
                         } catch (Exception e) {
                             System.out.println("No es posible dividir por 0");
                         }
+                        break;
+                        case 6:
+                        System.out.println("El resultado de la potencia es: " + calculator.power(number1, number2));
                         break;
                     default:
                         break;
