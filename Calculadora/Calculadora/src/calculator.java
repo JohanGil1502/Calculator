@@ -18,6 +18,10 @@ public class Calculator {
         return number1 / number2;
     }
 
+    public double root(double exponent, double base){
+        return Math.pow(1/exponent, base);
+    }
+
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
 
@@ -30,6 +34,7 @@ public class Calculator {
                     "\n2. Restar" +
                     "\n3. Multiplicar" +
                     "\n4. Dividir" +
+                    "\n7. Raiz Cuadrada" +
                     "\n5. Salir");
 
             option = Integer.parseInt(scanner.nextLine());
@@ -52,6 +57,13 @@ public class Calculator {
                     case 4:
                         try {
                             System.out.println("El resultado de la división es: " + calculator.divide(number1, number2));
+                        } catch (Exception e) {
+                            System.out.println("No es posible dividir por 0");
+                        }
+                        break;
+                    case 7:
+                        try {
+                            System.out.println("El resultado de la raiz es: " + calculator.root(number1, number2));
                         } catch (Exception e) {
                             System.out.println("No es posible dividir por 0");
                         }
