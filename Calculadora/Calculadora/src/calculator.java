@@ -65,7 +65,7 @@ public class Calculator {
                         try {
                             System.out.println("El resultado de la raiz es: " + calculator.root(number1, number2));
                         } catch (Exception e) {
-                            System.out.println("No es posible dividir por 0");
+                            System.out.println("No es posible sacar raiz a un numero negativo");
                         }
                         break;
                     default:
